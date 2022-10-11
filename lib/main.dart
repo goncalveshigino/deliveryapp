@@ -1,8 +1,8 @@
-import 'package:deliveryapp/src/pages/auth/login_page.dart';
-import 'package:deliveryapp/src/utils/my_colors.dart';
-
-
 import 'package:flutter/material.dart';
+
+import 'package:deliveryapp/src/utils/my_colors.dart';
+import 'src/pages/auth/login/login_page.dart';
+import 'src/pages/auth/register/register_page.dart';
 
 
 void main() {
@@ -25,10 +25,12 @@ class _MyAppState extends State<MyApp> {
       title: 'Delivery',
       initialRoute: 'login',
       routes: {
-        'login': (BuildContext context ) => const LoginPage()
+        'login': (BuildContext context ) => const LoginPage(),
+        'register': (BuildContext context) =>  RegisterPage(),
       },
       theme: ThemeData(
-        primarySwatch:  Colors.red
+        primarySwatch:  Colors.red,
+       // fontFamily: 'NimbusSans'
       ),
     );
   }
